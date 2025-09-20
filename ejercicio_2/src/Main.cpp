@@ -2,27 +2,44 @@
 #include <vector>
 
 
-// Vertices del ejemplo, se puede modificar para cambiar la figura o incluir mas c:
 std::vector<float> m_vertices = {
-    -1.0f,  1.0f, 0.0f,
-    -1.0f, 0.0f, 0.0f,
-    0.0f,  1.0f, 0.0f,
+    // --- Cuadrado (2 triángulos) ---
+    -0.8f,  0.8f, 0.0f,   -0.4f,  0.8f, 0.0f,   -0.4f, 0.4f, 0.0f,
+    -0.8f,  0.8f, 0.0f,   -0.4f,  0.4f, 0.0f,   -0.8f, 0.4f, 0.0f,
 
-    1.0f, -1.0f, 0.0f,
-    1.0f, 0.0f, 0.0f,
-    0.0f, -1.0f, 0.0f
+    // --- Triángulo ---
+     0.0f,  0.8f, 0.0f,   -0.2f, 0.4f, 0.0f,    0.2f, 0.4f, 0.0f,
+
+    // --- Rectángulo (2 triángulos) ---
+    //-0.8f, -0.2f, 0.0f,    0.0f, -0.2f, 0.0f,    0.0f, -0.6f, 0.0f,
+    //-0.8f, -0.2f, 0.0f,    0.0f, -0.6f, 0.0f,   -0.8f, -0.6f, 0.0f,
+    0.4f, -0.6f ,0.0f,  0.8f, -0.6f, 0.0f,   0.8f, 0.2f, 0.0f,
+    0.4f, -0.6f ,0.0f,   0.8f, 0.2f, 0.0f,   0.4f, 0.2f, 0.0f,
+    //0.2f, -0.6f ,0.0f,   0.4f, 0.2f, 0.0f,   0.2f, 0.2f, 0.0f,
+    //0.2f, -0.6f ,0.0f,   -0.2f, -0.2f, 0.0f,    0.2f, -0.2f, 0.0f,
+
+    // --- Rombo (2 triángulos arriba, 2 abajo) ---
+     0.0f, -0.2f, 0.0f,   -0.2f, -0.6f, 0.0f,    0.2f, -0.6f, 0.0f,
+     0.0f, -1.0f, 0.0f,   -0.2f, -0.6f, 0.0f,    0.2f, -0.6f, 0.0f
 };
-// Colores del ejemplo, de igual forma se puede modificar
+
 std::vector<float> m_colors = {
-    1.0f,  0.0f, 0.0f,
-    0.0f,  1.0f, 0.0f,
-    0.0f,  0.0f, 1.0f,
+    // Colores cuadrado
+    1,1,0,   1,0,1,   0,1,1,
+    1,1,0,   0,1,1,  1,0,1, 
+    //0,1,1 , 1,0,1, 1,1,0,
 
-    1.0f, 1.0f, 0.0f,
-    1.0f, 0.0f, 1.0f,
-    0.0f, 1.0f, 1.0f
+    // Colores triángulo
+    1,0,0,   0,1,0,   0,0,1,
+
+    // Colores rectángulo
+    1,0,0,   0,1,0,   0,0,1,
+    1,0,0,   0,0,1,   0,1,0,
+
+    // Colores rombo
+    1,1,0,   1,0,1,   0,1,1,   
+    1,1,0,   1,0,1,   0,1,1
 };
-
 /* Metodo principal */
 int main() {
     // Creamos la aplicacion

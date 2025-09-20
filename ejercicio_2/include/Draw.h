@@ -67,7 +67,7 @@ namespace opengl{
             void drawObject(GLuint shaderProgram, GLsizei count) {
                 glUseProgram(shaderProgram);
                 glBindVertexArray(m_VAO);
-                glDrawArrays(GL_TRIANGLE_STRIP, 0, count);
+                glDrawArrays(GL_TRIANGLES, 0, count);
             }
     };
 }
